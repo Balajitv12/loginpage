@@ -1,0 +1,224 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(background.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+.logo{
+  color: white;
+  font-size: 25px;
+}
+.navigation a{
+  position: relative;
+  font-size: 1.1em;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 40px;
+  font-family: 'space Grotesk', sans-serif;
+}
+.navigation .a-home{
+  color: #00FFFF;
+}
+.navigation .a-about{
+  color: #FF00FF;
+}
+.navigation .a-services{
+  color: #00FF00;
+}
+.navigation .a-contact{
+  color: #FF4500;
+}
+.navigation a::after{
+  content:  '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: white;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: transform.5s;
+  transform-origin: right;
+  background-image: linear-gradient( #c0c0c0 );
+}
+.navigation a:hover::after{
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.navigation .login-button{
+  background-image: linear-gradient(to bottom right, #008cffba ,#e100ff);
+  color: white;
+  width: 130px;
+  height: 50px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: white;
+  cursor: pointer;
+  border-radius: 100px;
+  font-size: 1.1em;
+  font-weight: 500;
+  border: none;
+  margin-left: 40px;
+}
+.navigation .login-button:hover{
+  background-color: white;
+  color: black;
+ box-shadow: 0px 10px 80px white;
+}
+.wrapper{
+  position: relative;
+  width: 400px;
+  height: 440px;
+  background-color: transparent;
+  backdrop-filter:blur(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 18px;
+  border: 3px solid rgba(255,255,255,.5);
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.861);
+  overflow: hidden;
+  
+}
+.is-closed{
+  transform: scale(0);
+}
+.wrapper .form-box-logo{
+  width: 100%;
+  padding: 30px;
+}
+.wrapper .icon-close{
+  position:absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background-color: black;
+  font-size: 2em;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+.form-box-logo h2{
+  font-size: 35px;
+  color: black;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.input-box{
+  position:relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid #9b9ea1;
+  margin-bottom: 20px;
+}
+.input-box label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 15px;
+  color: #162938;
+  font-weight: 500;
+  pointer-events: none;
+  transition: .5s;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+  top: -6px;
+}
+.input-box input{
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+  background: transparent;
+  border: none;
+  outline: none;    
+  padding: 0 35px 0 5px;
+}
+
+.input-box .icon{
+  position:absolute;
+  right: 8px;
+  font-size: 20px;
+  color:#162938;
+  line-height: 57px;
+}
+.remember-forgot{
+  font-size: 1em;
+  color:#162938;
+  font-weight: 500;
+  margin: 0px 0 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.remember-forgot label{
+  font-size: .9em;
+}
+.remember-forgot label input{
+  accent-color:#162938 ;
+  margin-right: 3px;
+}
+.remember-forgot a{
+  font-size: .6em;
+  color: #162938;
+  text-decoration: none;
+}
+.remember-forgot a:hover{
+  text-decoration: underline;
+}
+.btn{
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 180px;
+  background-color: #162938;
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  border: none;
+}
+.login-register{
+  font-size: 17px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 30px 0 15px;
+  color: #162938;
+}
+.login-register p a{
+  color: #162938;
+  text-decoration: none;
+}
+.login-register p a:hover{
+  text-decoration: underline;
+}
